@@ -2,7 +2,7 @@
 import React from "react";
 import "./App.css";
 import BottomRow from "./BottomRow";
-import React, {useState} from "react";
+import {useState} from "react";
 
 function App() {
   //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
@@ -31,12 +31,12 @@ function App() {
       <section className="buttons">
         <div className="homeButtons">
           {/* TODO STEP 4 - Now we need to attach our state setter functions to click listeners. */}
-          <button className="homeButtons__touchdown">Home Touchdown</button>
-          <button className="homeButtons__fieldGoal">Home Field Goal</button>
+          <button className ="homeButtons__touchdown" onClick = {() => setCountHomeScore(countHomeScore + 6)}>Home Touchdown</button>
+          <button className="homeButtons__fieldGoal" onClick = {() => setCountHomeScore(countHomeScore + 1)}>Home Field Goal</button>
         </div>
         <div className="awayButtons">
-          <button className="awayButtons__touchdown">Away Touchdown</button>
-          <button className="awayButtons__fieldGoal">Away Field Goal</button>
+          <button className="awayButtons__touchdown" onClick = {() => setCountAwayScore(countAwayScore + 6)}>Away Touchdown</button>
+          <button className="awayButtons__fieldGoal" onClick = {() => setCountAwayScore(countAwayScore + 1)}>Away Field Goal</button>
         </div>
       </section>
     </div>
